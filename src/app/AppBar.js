@@ -1,24 +1,17 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { AppContext } from "./AppProvider";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ConfirmButton from "./Settings/ConfirmButton";
+import logocoin from "./logocoin.svg";
 
-const Logo = styled.div`
-  font-size: 2em;
-  color: white;
-`;
+// const Logo = styled.div`
+//   font-size: 2em;
+//   color: white;
+// `;
 
-const Bar = styled.nav`
-  font-size: 1em;
-  z-index: 10;
-  display: grid;
-  padding-bottom: 5%;
-  padding-top: 4%;
-  padding-left: 10%;
-  pading-right: 10%;
-  margin-bottom: 2%;
-  grid-template-columns: 1fr auto 0.5fr 0.5fr;
+const Nav = styled.nav`
   background-color: #115740;
-  width: 100%;
 `;
 
 const ControlButtonElem = styled.div`
@@ -37,6 +30,7 @@ const ControlButtonElem = styled.div`
     css`
       display: none;
       color: white;
+      font-size: 1.5em;
     `}
 `;
 
@@ -61,13 +55,41 @@ function ControlButton({ name }) {
 }
 export default function() {
   return (
-    <Bar>
-      <Logo>
-        <i class="fas fa-search-dollar"></i>Stock Sapient
-      </Logo>
-      <div />
-      <ControlButton active name="dashboard"></ControlButton>
-      <ControlButton name="settings"></ControlButton>
-    </Bar>
+    <Nav className="navbar navbar-expand-lg navbar-light">
+      <ul className="navbar-nav">
+        <a className="navbar-brand mt-3 mb-3 ml-5 mr-5">
+          <img src={logocoin} alt="logo" style={{ width: "70px" }} />
+        </a>
+      </ul>
+      <ControlButton
+        li
+        active
+        name="dashboard"
+        className="navbar-toggler ml-5 mr-5"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </ControlButton>
+
+      <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ml-5">
+        <ControlButton name="settings" li className="nav-item">
+          <a className="nav-link" href="#"></a>
+        </ControlButton>
+      </ul>
+    </Nav>
   );
 }
+
+// {/* <Bar>
+// <Logo>
+//   <i className="fas fa-search-dollar"></i>Stock Sapient
+// </Logo>
+// <div />
+// <ControlButton active name="dashboard"></ControlButton>
+// <ControlButton name="settings"></ControlButton>
+// </Bar> */}</Bar>

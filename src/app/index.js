@@ -7,6 +7,7 @@ import { AppProvider } from "./AppProvider";
 import Settings from "../app/Settings";
 import Content from "../app/Shared/Content";
 import Dashboard from "../app/Dashboard";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   render() {
