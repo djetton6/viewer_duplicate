@@ -1,5 +1,5 @@
 ## Stock Pro Viewer Duplicate
-Having a hard finding off campus housing to succeed in school? Use student stay over to find local university students that are looking for roommates. Users can filter by campus, accomodations, and price.
+Finding the right stock or coin can be a challenge! Look at these historical charts to find the right investment vehicle. 
 
 ## Getting Started
 Clone this repository on your local machine.
